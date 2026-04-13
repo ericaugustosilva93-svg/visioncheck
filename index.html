@@ -21,7 +21,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 h1{font-size:24px;font-weight:600;color:#1a1a2e;line-height:1.3;margin-bottom:0.5rem}
 h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
 .card{background:#fff;border:1px solid #e8edf5;border-radius:16px;padding:1rem 1.25rem;margin-bottom:1rem;box-shadow:0 1px 4px rgba(0,0,0,0.04)}
-.vc-btn{background:#1a5fb4;color:#fff;border:none;border-radius:10px;padding:15px 32px;font-size:16px;font-weight:600;cursor:pointer;width:100%;transition:background 0.2s;margin-top:4px;letter-spacing:0.1px}
+.vc-btn{background:#1a5fb4;color:#fff;border:none;border-radius:10px;padding:15px 32px;font-size:16px;font-weight:600;cursor:pointer;width:100%;transition:background 0.2s;margin-top:4px}
 .vc-btn:hover{background:#1248a0}
 .vc-btn:disabled{background:#b5d4f4;cursor:not-allowed}
 .vc-btn-wpp{background:#1d9e75;color:#fff;border:none;border-radius:10px;padding:15px 32px;font-size:16px;font-weight:600;cursor:pointer;width:100%;transition:background 0.2s;margin-top:10px}
@@ -65,8 +65,6 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
 .trust-item p:first-child{font-size:11px;font-weight:700;color:#0c447c;margin-bottom:2px}
 .trust-item p:last-child{font-size:10px;color:#888;line-height:1.3}
 .urgency-card{background:#fcebeb;border:1px solid #f09595;border-radius:10px;padding:12px 14px;margin-bottom:1rem;display:flex;align-items:flex-start;gap:10px}
-.clinic-card{background:#fff;border:1px solid #e8edf5;border-radius:14px;padding:1rem 1.25rem;margin-bottom:10px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
-.clinic-avatar{width:44px;height:44px;border-radius:50%;background:#e6f1fb;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
 .available-dot{width:8px;height:8px;border-radius:50%;background:#1d9e75;display:inline-block;margin-right:4px}
 .footer-stats{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid #e8edf5}
 .stat-item{text-align:center}
@@ -82,7 +80,6 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
 <body>
 <div class="app">
 
-<!-- TELA 0: INÍCIO -->
 <div id="s0" class="screen active">
   <div style="text-align:center;padding:1.5rem 0 1rem">
     <div style="width:88px;height:88px;border-radius:50%;background:#e6f1fb;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">
@@ -121,7 +118,6 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   </div>
 </div>
 
-<!-- TELA 1: INSTRUÇÕES -->
 <div id="s1" class="screen">
   <div class="logo">Vision<span>Check</span></div>
   <div class="subtitle">Preparação importante</div>
@@ -138,13 +134,9 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   <button class="vc-btn" onclick="go('s2')">Estou pronto para começar</button>
 </div>
 
-<!-- TELA 2: ACUIDADE -->
 <div id="s2" class="screen">
   <div class="logo">Vision<span>Check</span></div>
-  <div class="progress-wrap">
-    <div class="progress-label"><span>Etapa 1 de 6 — Acuidade visual</span><span>17%</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:17%"></div></div>
-  </div>
+  <div class="progress-wrap"><div class="progress-label"><span>Etapa 1 de 6 — Acuidade visual</span><span>17%</span></div><div class="progress-bar"><div class="progress-fill" style="width:17%"></div></div></div>
   <h2>Qual letra aparece na linha destacada?</h2>
   <p style="font-size:13px;color:#888;margin-bottom:0.75rem">Leia sem forçar. Se não conseguir, selecione "Não consigo ler".</p>
   <div class="test-canvas dark-canvas" style="height:220px;flex-direction:column;gap:6px;padding:16px">
@@ -164,13 +156,9 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   </div>
 </div>
 
-<!-- TELA 3: CONTRASTE -->
 <div id="s3" class="screen">
   <div class="logo">Vision<span>Check</span></div>
-  <div class="progress-wrap">
-    <div class="progress-label"><span>Etapa 2 de 6 — Contraste</span><span>33%</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:33%"></div></div>
-  </div>
+  <div class="progress-wrap"><div class="progress-label"><span>Etapa 2 de 6 — Contraste</span><span>33%</span></div><div class="progress-bar"><div class="progress-fill" style="width:33%"></div></div></div>
   <h2>Você consegue ver a letra em cada bloco?</h2>
   <p style="font-size:13px;color:#888;margin-bottom:0.75rem">Quantas letras você consegue identificar com clareza?</p>
   <div class="test-canvas light-canvas" style="height:200px;padding:16px">
@@ -189,13 +177,9 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   </div>
 </div>
 
-<!-- TELA 4: ASTIGMATISMO -->
 <div id="s4" class="screen">
   <div class="logo">Vision<span>Check</span></div>
-  <div class="progress-wrap">
-    <div class="progress-label"><span>Etapa 3 de 6 — Astigmatismo</span><span>50%</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
-  </div>
+  <div class="progress-wrap"><div class="progress-label"><span>Etapa 3 de 6 — Astigmatismo</span><span>50%</span></div><div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div></div>
   <h2>Observe as linhas com atenção</h2>
   <p style="font-size:13px;color:#888;margin-bottom:0.75rem">Foque no ponto central. Alguma linha parece mais escura, mais grossa ou desfocada?</p>
   <div class="test-canvas dark-canvas" style="height:220px">
@@ -220,13 +204,9 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   </div>
 </div>
 
-<!-- TELA 5: CORES -->
 <div id="s5" class="screen">
   <div class="logo">Vision<span>Check</span></div>
-  <div class="progress-wrap">
-    <div class="progress-label"><span>Etapa 4 de 6 — Cores</span><span>67%</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:67%"></div></div>
-  </div>
+  <div class="progress-wrap"><div class="progress-label"><span>Etapa 4 de 6 — Cores</span><span>67%</span></div><div class="progress-bar"><div class="progress-fill" style="width:67%"></div></div></div>
   <h2>Que número você vê?</h2>
   <p style="font-size:13px;color:#888;margin-bottom:0.75rem">Olhe naturalmente, sem forçar.</p>
   <div class="test-canvas" style="height:210px;background:#f5f0e8">
@@ -240,13 +220,9 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   </div>
 </div>
 
-<!-- TELA 6: CAMPO VISUAL -->
 <div id="s6" class="screen">
   <div class="logo">Vision<span>Check</span></div>
-  <div class="progress-wrap">
-    <div class="progress-label"><span>Etapa 5 de 6 — Campo visual</span><span>83%</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:83%"></div></div>
-  </div>
+  <div class="progress-wrap"><div class="progress-label"><span>Etapa 5 de 6 — Campo visual</span><span>83%</span></div><div class="progress-bar"><div class="progress-fill" style="width:83%"></div></div></div>
   <h2>Teste de campo visual</h2>
   <p style="font-size:13px;color:#888;margin-bottom:0.75rem">Foque no ponto azul central <strong>sem mover os olhos</strong>. Toque nas bolinhas quando aparecerem.</p>
   <div class="test-canvas dark-canvas" style="height:240px;cursor:crosshair;position:relative" id="field-area">
@@ -259,13 +235,9 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   <button class="vc-btn" id="field-btn" onclick="startField()">Iniciar teste de campo</button>
 </div>
 
-<!-- TELA 7: SINTOMAS -->
 <div id="s7" class="screen">
   <div class="logo">Vision<span>Check</span></div>
-  <div class="progress-wrap">
-    <div class="progress-label"><span>Etapa 6 de 6 — Sintomas</span><span>100%</span></div>
-    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
-  </div>
+  <div class="progress-wrap"><div class="progress-label"><span>Etapa 6 de 6 — Sintomas</span><span>100%</span></div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></div>
   <h2>Questionário clínico</h2>
   <p style="font-size:13px;color:#888;margin-bottom:1rem">Selecione todos os sintomas que você sente, mesmo que raramente.</p>
   <div id="symp-list">
@@ -296,32 +268,31 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   <button class="vc-btn" onclick="go('s8')">Ver resultado parcial</button>
 </div>
 
-<!-- TELA 8: CAPTURA DE LEAD -->
 <div id="s8" class="screen">
   <div class="logo">Vision<span>Check</span></div>
   <h2 style="margin-bottom:0.25rem">Quase pronto!</h2>
   <p style="font-size:13px;color:#888;margin-bottom:1.25rem">Preencha seus dados para liberar o resultado completo e receber orientação de um especialista da sua região.</p>
   <label class="form-label">Nome completo</label>
-  <input class="form-input" type="text" placeholder="Seu nome"/>
+  <input class="form-input" id="f-nome" type="text" placeholder="Seu nome"/>
   <label class="form-label">Idade</label>
-  <input class="form-input" type="number" placeholder="Ex: 34"/>
+  <input class="form-input" id="f-idade" type="number" placeholder="Ex: 34"/>
   <label class="form-label">Cidade</label>
-  <input class="form-input" type="text" placeholder="Ex: Juiz de Fora - MG"/>
+  <input class="form-input" id="f-cidade" type="text" placeholder="Ex: Juiz de Fora - MG"/>
   <label class="form-label">WhatsApp</label>
-  <input class="form-input" type="tel" placeholder="(32) 99999-0000"/>
+  <input class="form-input" id="f-wpp" type="tel" placeholder="(32) 99999-0000"/>
   <label class="form-label">Plano de saúde</label>
-  <select class="form-select">
+  <select class="form-select" id="f-plano">
     <option>Não tenho plano</option><option>Unimed</option><option>Bradesco Saúde</option><option>Amil</option><option>SulAmérica</option><option>Hapvida</option><option>Outro</option>
   </select>
   <label class="form-label">Usa óculos ou lentes de contato?</label>
-  <select class="form-select" onchange="setOculos(this.value)">
+  <select class="form-select" id="f-oculos" onchange="setOculos(this.value)">
     <option value="0">Não uso</option>
     <option value="2">Sim, óculos</option>
     <option value="2">Sim, lentes de contato</option>
     <option value="1">Uso mas não sei se estou no grau certo</option>
   </select>
   <label class="form-label">Interesse em consulta com especialista</label>
-  <select class="form-select" onchange="setInteresse(this.value)">
+  <select class="form-select" id="f-interesse" onchange="setInteresse(this.value)">
     <option value="3">Sim, quero agendar</option>
     <option value="1">Talvez, depende do resultado</option>
     <option value="0">Só estou curioso</option>
@@ -330,7 +301,6 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   <button class="vc-btn" onclick="calcResult()">Ver resultado completo</button>
 </div>
 
-<!-- TELA 9: RESULTADO -->
 <div id="s9" class="screen">
   <div class="logo">Vision<span>Check</span></div>
   <div id="result-main"></div>
@@ -343,21 +313,11 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
     <p id="rec-text" style="font-size:14px;line-height:1.6;color:#666"></p>
   </div>
   <div id="urgency-block"></div>
-  <p style="font-size:13px;font-weight:600;color:#1a1a2e;margin-bottom:0.75rem">Especialistas com agenda disponível na sua cidade</p>
-  <div class="clinic-card">
-    <div class="clinic-avatar">👁</div>
-    <div style="flex:1">
-      <p style="font-size:14px;font-weight:600">Clínica Oftalmológica Parceira</p>
-      <p style="font-size:12px;color:#888">Sua cidade · Aceita convênios</p>
-      <p style="font-size:12px;color:#1d9e75;margin-top:2px"><span class="available-dot"></span>Agenda disponível hoje</p>
-    </div>
-  </div>
   <div class="disclaimer">Resultado indicativo. Apenas um oftalmologista pode diagnosticar condições visuais com precisão.</div>
   <button class="vc-btn" onclick="go('s10')">Agendar avaliação agora</button>
   <button class="vc-btn-wpp" onclick="go('s10')">Falar com especialista pelo WhatsApp</button>
 </div>
 
-<!-- TELA 10: CONFIRMAÇÃO -->
 <div id="s10" class="screen" style="text-align:center;padding-top:2rem">
   <div style="width:72px;height:72px;border-radius:50%;background:#eaf3de;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem">
     <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><path d="M6 18 L14 26 L30 10" stroke="#3b6d11" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -375,11 +335,18 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
   </div>
 </div>
 
-</div><!-- .app -->
+</div>
 
 <script>
+// ============================================================
+// CONFIGURAÇÃO — substitua pela URL do seu Google Apps Script
+// ============================================================
+var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbw58gAjizc4o3jV5fMyGU-pEP6Jo-r1rkG5Wb3ldClI4dRkBIwInltL8RxN6KinZFa8QA/exec';
+// ============================================================
+
 var score=0,cats={acuidade:0,contraste:0,astigmatismo:0,cores:0,campo:0,sintomas:0};
 var fieldHits=0,fieldTotal=5,fieldDots=0,fieldDone=false;
+var sintomasSelecionados=[];
 
 function go(id){
   document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active')});
@@ -421,8 +388,7 @@ function startField(){
   btn.disabled=true;btn.textContent='Teste em andamento...';
   document.getElementById('field-score-display').style.display='block';
   var dot=document.getElementById('field-dot');
-  var msg=document.getElementById('field-msg');
-  msg.textContent='Não mova os olhos do ponto azul!';
+  document.getElementById('field-msg').textContent='Não mova os olhos do ponto azul!';
   fieldHits=0;fieldDots=0;
   function showDot(){
     if(fieldDots>=fieldTotal){endField();return}
@@ -446,7 +412,7 @@ function startField(){
 function endField(){
   document.getElementById('field-dot').style.display='none';
   document.getElementById('field-msg').textContent='Teste concluído!';
-  var res=document.getElementById('field-result');res.style.display='block';
+  document.getElementById('field-result').style.display='block';
   document.getElementById('field-hits').textContent=fieldHits;
   cats.campo=Math.round((fieldHits/fieldTotal)*100);
   if(fieldHits<3)score+=3;else if(fieldHits<5)score+=1;
@@ -458,8 +424,14 @@ function endField(){
 
 function togSymp(el,val){
   el.classList.toggle('on');var cb=el.querySelector('.chkbox');
-  if(el.classList.contains('on')){cb.classList.add('on');score+=val;cats.sintomas=Math.min(100,cats.sintomas+val*15)}
-  else{cb.classList.remove('on');score-=val;cats.sintomas=Math.max(0,cats.sintomas-val*15)}
+  var txt=el.querySelector('p').textContent;
+  if(el.classList.contains('on')){
+    cb.classList.add('on');score+=val;cats.sintomas=Math.min(100,cats.sintomas+val*15);
+    sintomasSelecionados.push(txt);
+  }else{
+    cb.classList.remove('on');score-=val;cats.sintomas=Math.max(0,cats.sintomas-val*15);
+    sintomasSelecionados=sintomasSelecionados.filter(function(s){return s!==txt});
+  }
 }
 function setTempo(v){score+=parseInt(v)||0}
 function setUltConsulta(v){score+=parseInt(v)||0}
@@ -473,25 +445,67 @@ function calcResult(){
   if(s<=5){
     level='Baixo';color='#3b6d11';bg='#eaf3de';
     title='Visão aparentemente normal';
-    rec='Seus resultados não indicam alterações significativas. Recomendamos manter consultas de rotina anuais com oftalmologista para preservar sua saúde visual.';
+    rec='Seus resultados não indicam alterações significativas. Recomendamos manter consultas de rotina anuais com oftalmologista.';
     urgMsg='';
   }else if(s<=11){
     level='Moderado';color='#854f0b';bg='#faeeda';
     title='Possível alteração visual detectada';
-    rec='Identificamos indícios que merecem atenção. Uma avaliação com oftalmologista é recomendada nos próximos 30 dias para descartar alterações de grau ou outras condições.';
+    rec='Identificamos indícios que merecem atenção. Uma avaliação com oftalmologista é recomendada nos próximos 30 dias.';
     urgMsg='Alterações moderadas tendem a evoluir se não tratadas. Agendar agora evita complicações futuras.';
   }else{
     level='Alto';color='#a32d2d';bg='#fcebeb';
     title='Avaliação urgente indicada';
-    rec='Seus resultados sugerem alterações significativas que precisam de avaliação profissional com brevidade. Não adie — muitas condições visuais têm melhor prognóstico quando tratadas cedo.';
+    rec='Seus resultados sugerem alterações significativas. Não adie a consulta — muitas condições têm melhor prognóstico quando tratadas cedo.';
     urgMsg='Resultado de risco alto. Consulta com oftalmologista recomendada o quanto antes.';
   }
   if(!cats.acuidade)cats.acuidade=60;
+
+  // Salva lead no Google Sheets
+  var nome=document.getElementById('f-nome').value;
+  var idade=document.getElementById('f-idade').value;
+  var cidade=document.getElementById('f-cidade').value;
+  var wpp=document.getElementById('f-wpp').value;
+  var plano=document.getElementById('f-plano').value;
+  var oculos=document.getElementById('f-oculos').options[document.getElementById('f-oculos').selectedIndex].text;
+  var interesse=document.getElementById('f-interesse').options[document.getElementById('f-interesse').selectedIndex].text;
+  var agora=new Date().toLocaleString('pt-BR');
+
+  var payload={
+    nome:nome,
+    idade:idade,
+    cidade:cidade,
+    whatsapp:wpp,
+    plano:plano,
+    oculos:oculos,
+    interesse:interesse,
+    sintomas:sintomasSelecionados.join(', ')||'Nenhum',
+    score:s,
+    risco:level,
+    acuidade:cats.acuidade+'%',
+    contraste:(cats.contraste||80)+'%',
+    astigmatismo:(cats.astigmatismo||70)+'%',
+    cores:(cats.cores||90)+'%',
+    campo:cats.campo+'%',
+    data:agora
+  };
+
+  if(SHEETS_URL && SHEETS_URL !== 'https://script.google.com/macros/s/AKfycbw58gAjizc4o3jV5fMyGU-pEP6Jo-r1rkG5Wb3ldClI4dRkBIwInltL8RxN6KinZFa8QA/exec'){
+    fetch(SHEETS_URL,{
+      method:'POST',
+      mode:'no-cors',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(payload)
+    }).catch(function(e){console.log('Erro ao salvar lead:',e)});
+  }
+
+  // Renderiza resultado
   var rm=document.getElementById('result-main');
   rm.innerHTML='<div class="result-gauge shine" style="background:'+bg+'"><div class="gauge-num" style="color:'+color+'">'+pct+'<span style="font-size:20px">%</span></div><p style="font-size:13px;color:'+color+';margin-top:4px">Risco '+level+'</p><p style="font-size:15px;font-weight:600;color:'+color+';margin-top:8px">'+title+'</p><div class="gauge-bar-wrap"><div class="gauge-bar" id="main-bar" style="width:0%;background:'+color+'"></div></div></div>';
   setTimeout(function(){var b=document.getElementById('main-bar');if(b)b.style.width=pct+'%'},100);
+
   var ub=document.getElementById('urgency-block');
   ub.innerHTML=urgMsg?'<div class="urgency-card"><div style="font-size:16px;flex-shrink:0">⚠️</div><p style="font-size:13px;color:#a32d2d;line-height:1.5">'+urgMsg+'</p></div>':'';
+
   var cb=document.getElementById('cat-bars');cb.innerHTML='';
   [{label:'Acuidade',val:cats.acuidade,c:'#1a5fb4'},
    {label:'Contraste',val:cats.contraste||80,c:'#185fa5'},
