@@ -341,7 +341,7 @@ h2{font-size:18px;font-weight:600;color:#1a1a2e;margin-bottom:0.5rem}
 // ============================================================
 // CONFIGURAÇÃO — substitua pela URL do seu Google Apps Script
 // ============================================================
-var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbwlTGBuoRJu-VeTKBk7qrdCVY_tZdXrzzbb7KTvy4EGXkwkRPNFTlrK9aTRoFPTL_Hycw/exec';
+var SHEETS_URL = 'https://script.google.com/macros/s/AKfycbxJLAJCt_Ubrxdh54GOr3oP3V4UufqTo4HZu3pSaceZfDEi1PD_dt3Mq0DJfpm8GPQmbQ/exec';
 // ============================================================
 
 var score=0,cats={acuidade:0,contraste:0,astigmatismo:0,cores:0,campo:0,sintomas:0};
@@ -489,13 +489,12 @@ function calcResult(){
     data:agora
   };
 
-  if(SHEETS_URL && SHEETS_URL !== 'https://script.google.com/macros/s/AKfycbwlTGBuoRJu-VeTKBk7qrdCVY_tZdXrzzbb7KTvy4EGXkwkRPNFTlrK9aTRoFPTL_Hycw/exec'){
-    fetch(SHEETS_URL,{
-      method:'POST',
-      mode:'no-cors',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(payload)
-    }).catch(function(e){console.log('Erro ao salvar lead:',e)});
+  if(SHEETS_URL){
+    var params=Object.keys(payload).map(function(k){
+      return encodeURIComponent(k)+'='+encodeURIComponent(payload[k]);
+    }).join('&');
+    var img=new Image();
+    img.src=SHEETS_URL+'?'+params;
   }
 
   // Renderiza resultado
